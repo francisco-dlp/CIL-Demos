@@ -1,10 +1,7 @@
 {
-  "name": "CIL-Demos (GPU)",
+  "name": "CIL-Demos",
   "build": {
     "dockerfile": "Dockerfile"
-  },
-  "hostRequirements": {
-    "gpu": "optional"
   },
   "remoteUser": "vscode",
   "postCreateCommand": "bash .devcontainer/setup.sh",
@@ -15,7 +12,7 @@
         "ms-python.python"
       ],
       "settings": {
-        "python.defaultInterpreterPath": "/home/vscode/miniconda3/envs/cil_demos/bin/python",
+        "python.defaultInterpreterPath": "/opt/conda/envs/cil_demos/bin/python",
         "jupyter.notebookFileRoot": "${workspaceFolder}"
       }
     }
