@@ -1,0 +1,20 @@
+name: cil_demos
+channels:
+  - conda-forge
+  - https://software.repos.intel.com/python/conda
+dependencies:
+  - python=3.12
+  - ccpi::cil=25.0.0
+  - numpy=1.26
+  - conda-forge::astra-toolbox=2.1=py*
+  - ccpi::ccpi-regulariser=24.0.1
+  - ccpi::tomophantom=2.0.0
+  - ipykernel
+  - ipywidgets
+  - scikit-image
+  - matplotlib-base >=3.3.0
+  - dxchange >=0.2.1
+  - olefile >=0.46
+  - jupyter
+  - jupyterlab
+  - zenodo_get >=1.6

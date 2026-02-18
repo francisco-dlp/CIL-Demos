@@ -1,0 +1,28 @@
+{
+  "name": "CIL-Demos (GPU)",
+  "image": "mcr.microsoft.com/devcontainers/miniconda:1-3",
+  "hostRequirements": {
+    "gpu": "optional"
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/nvidia-cuda:1": {
+      "installCudnn": true,
+      "cudaVersion": "12.6",
+      "installToolkit": true
+    }
+  },
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-toolsai.jupyter",
+        "ms-python.python"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/opt/conda/envs/cil_demos/bin/python",
+        "jupyter.notebookFileRoot": "${workspaceFolder}"
+      }
+    }
+  },
+  "forwardPorts": [8888]
+}
