@@ -3,6 +3,9 @@ set -euo pipefail
 
 echo "=== Setting up CIL-Demos environment ==="
 
+# Suppress all interactive prompts from conda (ToS acceptance, etc.)
+export CONDA_ALWAYS_YES=true
+
 # Check for GPU availability
 if command -v nvidia-smi &>/dev/null; then
     echo "GPU detected:"
