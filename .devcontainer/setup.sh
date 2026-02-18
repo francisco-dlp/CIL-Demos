@@ -21,7 +21,8 @@ conda env create -f "${ENV_FILE}" -n cil_demos || \
 
 # Register the Jupyter kernel so notebooks can find it
 echo "=== Registering Jupyter kernel ==="
-/opt/conda/envs/cil_demos/bin/python -m ipykernel install \
+CONDA_PREFIX="${HOME}/miniconda3"
+"${CONDA_PREFIX}/envs/cil_demos/bin/python" -m ipykernel install \
     --user --name cil_demos --display-name "Python (CIL)"
 
 echo "=== Setup complete ==="
